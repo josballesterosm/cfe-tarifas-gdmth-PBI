@@ -1,0 +1,18 @@
+[
+  {"division": "BAJA CALIFORNIA", "estado": "BAJA CALIFORNIA", "municipio": "TIJUANA"},
+  {"division": "BAJA CALIFORNIA SUR", "estado": "BAJA CALIFORNIA SUR", "municipio": "LA PAZ"},
+  {"division": "BAJÍO", "estado": "AGUASCALIENTES", "municipio": "AGUASCALIENTES"},
+  {"division": "CENTRO OCCIDENTE", "estado": "MICHOACÁN", "municipio": "MORELIA"},
+  {"division": "CENTRO ORIENTE", "estado": "PUEBLA", "municipio": "PUEBLA"},
+  {"division": "CENTRO SUR", "estado": "MORELOS", "municipio": "CUERNAVACA"},
+  {"division": "GOLFO CENTRO", "estado": "TAMAULIPAS", "municipio": "TAMPICO"},
+  {"division": "GOLFO NORTE", "estado": "NUEVO LEÓN", "municipio": "MONTERREY"},
+  {"division": "JALISCO", "estado": "JALISCO", "municipio": "GUADALAJARA"},
+  {"division": "NOROESTE", "estado": "SONORA", "municipio": "HERMOSILLO"},
+  {"division": "ORIENTE", "estado": "VERACRUZ", "municipio": "VERACRUZ"},
+  {"division": "PENINSULAR", "estado": "YUCATÁN", "municipio": "MERIDA"},
+  {"division": "SURESTE", "estado": "TABASCO", "municipio": "BALANCAN"},
+  {"division": "VALLE DE MÉXICO CENTRO", "estado": "CIUDAD DE MÉXICO", "municipio": "CUAUHTEMOC"},
+  {"division": "VALLE DE MÉXICO NORTE", "estado": "ESTADO DE MÉXICO", "municipio": "ECATEPEC DE MORELOS"},
+  {"division": "VALLE DE MÉXICO SUR", "estado": "ESTADO DE MÉXICO", "municipio": "CHALCO"}
+]

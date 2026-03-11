@@ -1,0 +1,42 @@
+name: Scrape tarifas GDMTH (retry día 10)
+
+on:
+  schedule:
+    # Día 10 de cada mes a las 9:00 AM (hora Ciudad de México, UTC-6)
+    # Retry por si CFE no había publicado el día 5
+    - cron: '0 15 10 * *'
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run scraper (mes actual)
+        run: python src/scraper.py --workers 1 --delay 2
+
+      - name: Check for changes
+        id: changes
+        run: |
+          git diff --quiet data/tarifas_gdmth.csv && echo "changed=false" >> $GITHUB_OUTPUT || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit and push updated CSV
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/tarifas_gdmth.csv
+          git commit -m "Actualizar tarifas GDMTH $(date +'%Y-%m') (retry)"
+          git push
